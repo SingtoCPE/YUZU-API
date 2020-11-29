@@ -20,9 +20,10 @@ app.use(function (req, res, next) {
 
 const db = mysql.createConnection({
   host: process.env.host,
-  user: process.env.username,
+  user: process.env.user,
   password: process.env.password,
   database: process.env.database,
+  port : 3307,
 });
 
 app.get('/employee', (req, res) => {
